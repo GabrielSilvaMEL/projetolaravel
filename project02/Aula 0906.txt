@@ -1,0 +1,1 @@
+resources> nova pasta chamada images e dentro de css uma pasta chamada style.css
