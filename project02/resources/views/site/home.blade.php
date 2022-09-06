@@ -1,4 +1,5 @@
 @extends('site.layout')
+
 @section('content')
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -132,4 +133,4 @@
 
   </div><!-- /.container -->
 
-@endsection
+  @endsection
