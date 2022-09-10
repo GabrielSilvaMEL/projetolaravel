@@ -9,7 +9,8 @@
 </div>
 
 <div class="container">
-    <form>
+    <form method='GET'>
+      @csrf
         <div class="form-group">
           <label for="emailContato">Email:</label>
           <input type="email" class="form-control" id="emailContato" name="emailContato" placeholder="nome@email.com">
@@ -26,3 +27,13 @@
         <div class="form-group">
           <label for="mensagemContato">Mensagem:</label>
           <textarea class="form-control" id="mensagemContato" name="mensagemContato" rows="3"></textarea>
+        </div>
+        <button type='submit' value="Enviar">Enviar</button>
+    </form>
+</div>
+<hr>
+<div class="container">
+    <p>Email: {{ $email }}</p>
+    <p>Tipo Contato: {{ $tipo }}</p>
+    <p>Mensagem: {{ $mensagem }}</p>
+</div>
