@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContatosController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CursoManagerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
