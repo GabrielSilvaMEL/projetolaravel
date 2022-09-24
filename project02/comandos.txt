@@ -1,0 +1,8 @@
+//abre o servidor
+php artisan serve
+
+//cria migration na tabela database/migration
+php artisan make:migration create_cursos_table
+
+//coloca o migrate no banco de dados
+php artisan migrate

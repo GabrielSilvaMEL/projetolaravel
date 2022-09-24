@@ -32,3 +32,5 @@ Route::get('/cursos', [CursosController::class, 'index'])->name('site.cursos');
 
 Route::get('/contatos', [ContatosController::class, 'index'])->name('site.contatos');
 Route::post('/contatos', [ContatosController::class, 'index'])->name('site.contatos');
+
+Route::resource('cursosmanager', CursoManagerController::class);
