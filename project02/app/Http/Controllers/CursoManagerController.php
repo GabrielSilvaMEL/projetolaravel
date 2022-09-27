@@ -51,17 +51,16 @@ class CursoManagerController extends Controller
         $curso->descricao = $request->descricao;
         $curso->imagem='';
         $dirImagem = "images/cursos";
-        if (request->hasFile('imagem') && 
-            $request->file('imagem')->isValid()){
+        if (request->hasFile('imagem') && $request->file('imagem')->isValid()){
             $requestImage = $request->imagem;
             $extension = $requestImage->extension();
-
-            $imageName=md5{$requestImage->getClientOriginalName() . strtotime ('now') . '.' . $extension;
+ 
+            $imageName = md5 ( $requestImage -> getClientOriginalName() . strtotime ('now')) . '.' . $extension;
             $requestImage->move(public_path($dirImagem),$imageName);
             $curso->imagem=$dirImagem.$imageName;
         };
         $curso->save;
-        
+
 
         return redirect()->route('cursosmanager.index')->with('success','Curso criado com sucesso!');
     }
